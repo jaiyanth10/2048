@@ -35,6 +35,10 @@ function addRandomTile(board) {
 function Board() {
   const [board, setBoard] = useState(addRandomTile(addRandomTile(initialBoard)));
 
+  const resetBoard = () => {
+    setBoard(addRandomTile(addRandomTile(initialBoard)));
+  };
+
   useEffect(() => {
     const handleKeyDown = (event) => {
       switch (event.key) {
@@ -147,19 +151,35 @@ function Board() {
     return true;
   };
 
+  const isGameWon = () => {
+    for (let row = 0; row < 4; row++) {
+      for (let col = 0; col < 4; col++) {
+        if (board[row][col] === 2048) return true;
+      }
+    }
+    return false;
+  };
+
   useEffect(() => {
     if (isGameOver()) {
       alert('Game Over');
+      resetBoard();
+    } else if (isGameWon()) {
+      alert('You Win!');
+      resetBoard();
     }
   }, [board]);
 
   return (
+    <div>
     <div className="board">
       {board.map((row, rowIndex) =>
         row.map((value, colIndex) => (
           <Tile key={`${rowIndex}-${colIndex}`} value={value} />
         ))
       )}
+    </div>
+    <button className="new-game-button" onClick={resetBoard}>New Game</button>
     </div>
   );
 }

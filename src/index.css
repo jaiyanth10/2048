@@ -10,7 +10,7 @@ body {
 .instructions {
   color: white;
   text-align: center; /* Centering the text */
-  font-size:small;
+  font-size: small;
   margin-bottom: 20px; /* Add some margin at the bottom */
 }
 
@@ -58,7 +58,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 10px;
-  background: #bbada0;
+  background: #374151;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -73,9 +73,9 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  background: #cdc1b4;
+  background: #4b5563;
   border-radius: 5px;
-  color: #776e65;
+  color: #d1d5db;
   transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -89,73 +89,73 @@ body {
 }
 
 .tile-2 {
-  background: #eee4da;
+  background: #4b5563;
 }
 
 .tile-4 {
-  background: #ede0c8;
+  background: #6b7280;
 }
 
 .tile-8 {
-  background: #f2b179;
-  color: #f9f6f2;
+  background: #9ca3af;
+  color: #1f2937;
 }
 
 .tile-16 {
-  background: #f59563;
-  color: #f9f6f2;
+  background: #d1d5db;
+  color: #1f2937;
 }
 
 .tile-32 {
-  background: #f67c5f;
-  color: #f9f6f2;
+  background: #e5e7eb;
+  color: #1f2937;
 }
 
 .tile-64 {
-  background: #f65e3b;
-  color: #f9f6f2;
+  background: #f3f4f6;
+  color: #1f2937;
 }
 
 .tile-128 {
-  background: #edcf72;
-  color: #f9f6f2;
+  background: #fbbf24;
+  color: #1f2937;
 }
 
 .tile-256 {
-  background: #edcc61;
-  color: #f9f6f2;
+  background: #f59e0b;
+  color: #1f2937;
 }
 
 .tile-512 {
-  background: #edc850;
-  color: #f9f6f2;
+  background: #ef4444;
+  color: #1f2937;
 }
 
 .tile-1024 {
-  background: #edc53f;
-  color: #f9f6f2;
+  background: #dc2626;
+  color: #1f2937;
 }
 
 .tile-2048 {
-  background: #edc22e;
-  color: #f9f6f2;
+  background: #b91c1c;
+  color: #1f2937;
 }
 
-@keyframes merge {
-  0% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+.new-game-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-
-.tile-2 {
-  background: #eee4da;
+.new-game-button:hover {
+  background-color: #2563eb;
 }
-
-/* Other .tile classes omitted for brevity */
 
 @media (max-width: 640px) {
   .board {
@@ -169,6 +169,10 @@ body {
 
   .instructions {
     font-size: small;
+  }
+  .new-game-button {
+    font-size: 0.875rem;
+    padding: 8px 16px;
   }
 }
 
@@ -184,5 +188,9 @@ body {
 
   .tile {
     font-size: 1.2rem;
+  }
+  .new-game-button {
+    font-size: 0.75rem;
+    padding: 6px 12px;
   }
 }
