@@ -36,7 +36,7 @@ function Board() {
   const [board, setBoard] = useState(addRandomTile(addRandomTile(initialBoard)));
 
   const resetBoard = () => {
-    setBoard(addRandomTile(addRandomTile(initialBoard)));
+    window.location.reload();
   };
 
   useEffect(() => {
